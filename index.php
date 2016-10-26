@@ -1,3 +1,5 @@
 <?php
 
-echo "HELLO GitHub";
+include_once('connect.php');
+
+
