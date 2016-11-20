@@ -32,8 +32,6 @@ if(!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] == false) {
 }
 
 include_once('classes/connect.class.php');
-include_once('classes/select.class.php');
-
 
 $userName = $_SESSION['nick'] ;	
 $userEmail = $_SESSION['email'];
