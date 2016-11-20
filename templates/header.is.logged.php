@@ -8,4 +8,4 @@
 	
   
 		zalogowano
-		<a href="../class/logout.class.php">wyloguj</a>
+		<a href="../classes/logout.class.php">wyloguj</a>
