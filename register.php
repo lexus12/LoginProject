@@ -13,7 +13,7 @@ session_start();
 				  <div class="login">
 					<h1 class="login-heading">
 					  <strong>Witaj</strong> Zarejestruj się</h1>
-					  <form action="class/register.class.php" method="post">
+					  <form action="classes/register.class.php" method="post">
 						<input type="text" name="nick" placeholder="NICK" required="required" class="input-txt" />
 						  <input type="password" name="password" placeholder="HASŁO" required="required" class="input-txt" />
 						  <input type="password" name="password2" placeholder="POWTÓRZ HASŁO" required="required" class="input-txt" />
