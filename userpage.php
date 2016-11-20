@@ -36,7 +36,9 @@ include_once('classes/select.class.php');
 
 
 $userName = $_SESSION['nick'] ;	
-$userData = new UserObject($userName,'xxx');
+$userEmail = $_SESSION['email'];
+$userPrivil = $_SESSION['user_privilege'];
+$userData = new UserObject($userName, $userEmail);
 
 ?>
 
@@ -48,6 +50,10 @@ $userData = new UserObject($userName,'xxx');
 	<body>
 	
 		<h2><?php $userData->showUser(); ?> zalogowałeś się na konto!<br/></h2>
+		<p>Twój email to: <b><?php echo $userEmail; ?></b> </p>
+		<p>Twój status to:
+			<b><?php	if($userPrivil == 1) {echo 'Administrator';}	else {echo "Użytkownik";}?></b>
+		</p>
 		<a href="classes/logout.class.php">wyloguj</a>
 
 		
