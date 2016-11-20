@@ -32,7 +32,7 @@ class Login
 			//if exists log user and redirect to page
 			$_SESSION['is_logged'] = true;
 			$_SESSION['nick'] = $this->nick;
-			header('Location: userpage.class.php');
+			header('Location: ../userpage.php');
 			
 		} else {
 			//user not found - send an error to log page
