@@ -24,7 +24,7 @@ session_start();
 							<div class="comm">
 									<?php
                   //adds communicats to user
-                  include_once('class/communicats.class.php'); 
+                  include_once('classes/communicats.class.php'); 
                   ?>
 							</div>
 						  </div>
