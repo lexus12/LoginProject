@@ -1,3 +1,6 @@
+<?php
+include_once('classes/userdata.class.php');
+?>
 <html>
 	<header>
 		<title>My First Login Page</title>
