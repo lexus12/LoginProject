@@ -1,5 +1,5 @@
 <?php
-include_once('classes/userdata.class.php');
+session_start();
 ?>
 <html>
 	<header>
