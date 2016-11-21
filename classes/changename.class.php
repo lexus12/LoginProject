@@ -16,15 +16,28 @@ class Change
 	{
 			include_once('connect.class.php');
 			
-			$sql = ("UPDATE user SET nick = :nick");
-			$update = $conn->prepare($sql);
-			$update->bindValue(':nick' , $this->nick, PDO::PARAM_STR);
-			$update->execute();
+			$user = $conn->prepare("SELECT * FROM user WHERE nick = :nick");
+			$user->bindValue(':nick' , $this->nick, PDO::PARAM_STR);
+			$user->execute();
 			
-			$_SESSION['nickChange'] = true;
-			$_SESSION['nick'] = $this->nick;
-			header('Location: ../profile.php');
-		
+			if ($user->rowCount()) {
+				
+				$_SESSION['userN_exists_err'] = true;
+				header('Location: ../profile.php');
+				
+				
+			} else {
+			
+				$sql = ("UPDATE user SET nick = :nick");
+				$update = $conn->prepare($sql);
+				$update->bindValue(':nick' , $this->nick, PDO::PARAM_STR);
+				$update->execute();
+				
+				$_SESSION['nickChange'] = true;
+				$_SESSION['nick'] = $this->nick;
+				header('Location: ../profile.php');
+				
+			}
 	}//end of changeUserName
 	
 }//end of Change class
@@ -42,5 +55,3 @@ if(isset($_POST['zarejestruj'])) {
 	$login->addUser();
 
 }
-
-?>
