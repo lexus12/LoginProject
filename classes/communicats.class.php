@@ -36,6 +36,11 @@
 				echo "User with that E-mail allready exists";
 				$_SESSION['user_exists_err'] = false;
 			}
+			
+			if(isset($_SESSION['userN_exists_err']) && $_SESSION['userN_exists_err'] == true) {
+				echo "User with that Nick allready exists";
+				$_SESSION['userN_exists_err'] = false;
+			}
 
 			if(isset($_SESSION['register_err']) && $_SESSION['register_err'] == true) {
 				echo "Registration error try again";
@@ -46,4 +51,3 @@
 				echo "Your Nick was changed";
 				$_SESSION['nickChange'] = false;
 			}
-?>
