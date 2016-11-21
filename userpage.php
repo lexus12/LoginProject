@@ -46,14 +46,18 @@ $userData = new UserObject($userName, $userEmail);
 		<link rel="stylesheet" href="css/style.css">
 	</header>
 	<body>
-	
-		<h2><?php $userData->showUser(); ?> zalogowałeś się na konto!<br/></h2>
-		<p>Twój email to: <b><?php echo $userEmail; ?></b> </p>
-		<p>Twój status to:
-			<b><?php	if($userPrivil == 1) {echo 'Administrator';}	else {echo "Użytkownik";}?></b>
-		</p>
-		<a href="classes/logout.class.php">wyloguj</a>
-
-		
+		<div class="info">
+			<h2><?php $userData->showUser(); ?> You are logged in!<br/></h2>
+			<p>Your E-mail is: <b><?php echo $userEmail; ?></b> </p>
+			<p>Your status is:
+				<b><?php	if($userPrivil == 1) {echo 'Administrator';}	else {echo "Użytkownik";}?></b>
+			</p>
+			<div>
+				<a href="classes/profile.class.php" class="lnk">Edit your profile</a>
+			</div>
+			<div>
+				<a href="classes/logout.class.php" class="lnk">Logout</a>
+			</div>
+		</div>
 	</body>
 </html>	
