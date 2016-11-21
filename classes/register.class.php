@@ -12,7 +12,7 @@ class Register
 	private $email;
 	private $conn;
 	
-	public function __construct($nick, $password, $password, $password2, $email, $conn)
+	public function __construct($nick, $password, $password2, $email, $conn)
 	{
 		
 		$this->nick = $nick;
@@ -29,19 +29,16 @@ class Register
 		if($this->password == '' || strlen($this->password) < 6) {
 			$_SESSION['pass_err'] = true;
 			header('Location: ../register.php');
-			break;
 		} elseif($this->password != $this->password2) {
 			
 			$_SESSION['pass_err2'] = true;
 			header('Location: ../register.php');
-			break;
 		}
 				
 		//validate email
 		if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
 			$_SESSION['email_err'] = true;
 			header('Location: ../register.php');
-			break;
 		}
 		
 		
@@ -64,7 +61,7 @@ class Register
 			
 			
 		} else {
-			
+			//change this when You add a Admin user to value of 2 - User
 			$this->privl = 1;
 			$ins = $this->conn->prepare("INSERT INTO user (nick, password, email, user_privilege) VALUES (:nick, :password, :email, :privl)");
 		
@@ -99,7 +96,7 @@ if(isset($_POST['zarejestruj'])) {
 	$email = $_POST['email'];
 
 	
-	$login = new Register($nick, $password, $password, $password2, $email, $conn);
+	$login = new Register($nick, $password, $password2, $email, $conn);
 	$login->checkData();
 	
 	$login->addUser();
