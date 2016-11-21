@@ -14,7 +14,7 @@ include_once('classes/userdata.class.php');
 				<b><?php	if($userPrivil == 1) {echo 'Administrator';}	else {echo "Użytkownik";}?></b>
 			</p>
 			<div>
-				<a href="classes/profile.class.php" class="lnk">Edit your profile</a>
+				<a href="profile.php" class="lnk">Edit your profile</a>
 			</div>
 			<div>
 				<a href="classes/logout.class.php" class="lnk">Logout</a>
