@@ -45,12 +45,18 @@ session_start();
 							<input type="text" name="email" placeholder="NEW E-MAIL" required="required" class="input-txt"/>
 							<div class="login-footer">
 								<button type="submit" class="btn btn--right" name="changeEmail">Change Your E-MAIL</button>
-								<div class="comm">
+							</div>
+							<div class="comm">
 									<?php
 										//adds a comunicats when user need to know something
 										include_once('classes/communicats.class.php');
 									?>
-								</div>
+							</div>
+							<div class="err">
+									<?php
+										//adds a comunicats when user need to know something
+										include_once('classes/errors.class.php');
+									?>
 							</div>
 							</form>
 						</div>
