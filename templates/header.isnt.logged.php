@@ -8,17 +8,17 @@
 		  <div class="container">
 				  <div class="login">
 					<h1 class="login-heading">
-					  <strong>Witaj</strong> Zaloguj się</h1>
+					  <strong>Welcome - </strong> Login to account</h1>
 					  <form action="classes/login.class.php" method="post">
 						<input type="text" name="nick" placeholder="LOGIN" required="required" class="input-txt" />
-						  <input type="password" name="password" placeholder="HASŁO" required="required" class="input-txt" />
+						  <input type="password" name="password" placeholder="PASSWORD" required="required" class="input-txt" />
 						  <div class="login-footer">
 							 <a href="#" class="lnk">
-							  Zapomniałem hasła
+							  I forgot my password
 							</a>
-							<button type="submit" class="btn btn--right" name="submit">Zaloguj </button>
+							<button type="submit" class="btn btn--right" name="submit">Login</button>
 								<div>
-									<a href="register.php" class="lnk">Zarejestruj nowe konto</a>
+									<a href="register.php" class="lnk">Register new account</a>
 								</div>
 								<div class="comm">
 									<?php
@@ -30,6 +30,3 @@
 					  </form>
 				  </div>
 			</div>
-  
-    <script src="js/index.js"></script>
-
