@@ -83,14 +83,12 @@ if(isset($_SESSION['email2change'])) {
 	
 	$changeEmail = new Change($userName, $userEmail);
 	//check if email is correct then change user
+	
+
 	if($changeEmail->checkData() == true) {
 		
 		$changeEmail->changeUserEmail();
 		
 	}
 
-} else {
-	//no data sended to change then redirect
-	header('Location: ../profile.php');
-	
 }
