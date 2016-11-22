@@ -9,22 +9,65 @@ session_start();
 	<body>
 		<div class="info">
 			<div class="container">
-				  <div class="login">
+				 
+				  <div>
 					<h1 class="login-heading"><strong>Change your profile</strong></h1>
-					  <form action="classes/profile.class.php" method="post">
-						Current Nick: <b><?php echo $_SESSION['nick'], ': '; ?></b>
-						<input type="text" name="nick" placeholder="LOGIN" required="required" class="input-txt" value="New nick"/>
-						   <div class="login-footer">
-								<button type="submit" class="btn btn--right" name="changeNick">Change Your Nick</button>
+						<div class="lnk">
+						<b>Change Your Nick:</b><br/>
+						 <form action="classes/profile.class.php" method="post">
+							Current Nick: <b><?php echo $_SESSION['nick'], ': '; ?></b>
+							<input type="text" name="nick" placeholder="NEW LOGIN" required="required" class="input-txt"/>
+							   <div class="login-footer">
+									<button type="submit" class="btn btn--right" name="changeNick">Change Your Nick</button>
+									<div class="comm">
+										<?php
+											//adds a comunicats when user need to know something
+											include_once('classes/communicats.class.php');
+										  ?>
+									</div>
+							  </div>
+						  </form>
+						 </div>
+					</div>
+					
+					 <div  class="lnk">
+						<form action="classes/profile.class.php" method="post">
+							<b>Change Your Password:</b><br/>
+							Type Your current password: 
+							<input type="text" name="pass" placeholder="CURRENT PASSWORD" required="required" class="input-txt"/>
+							Type new password: 
+							<input type="text" name="newpass" placeholder="NEW PASSWORD" required="required" class="input-txt"/>
+							<div class="login-footer">
+								<button type="submit" class="btn btn--right" name="changePass">Change Your PASSWORD</button>
 								<div class="comm">
 									<?php
 										//adds a comunicats when user need to know something
 										include_once('classes/communicats.class.php');
 									  ?>
 								</div>
-						  </div>
-					  </form>
-				  </div>
+							</div>
+						</form>
+					</div>
+					
+					<div>
+						<div class="lnk">
+							<b>Change Your Email:</b><br/>
+							<form action="classes/profile.class.php" method="post">
+							Current E-MAIL: <b><?php echo $_SESSION['email'], ': '; ?></b>
+							<input type="text" name="email" placeholder="NEW E-MAIL" required="required" class="input-txt"/>
+							<div class="login-footer">
+								<button type="submit" class="btn btn--right" name="changeEmail">Change Your E-MAIL</button>
+								<div class="comm">
+									<?php
+										//adds a comunicats when user need to know something
+										include_once('classes/communicats.class.php');
+									?>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				 
 			</div>
 			
 			<div>
@@ -36,4 +79,4 @@ session_start();
 			</div>
 		</div>
 	</body>
-</html>	
+</html>
