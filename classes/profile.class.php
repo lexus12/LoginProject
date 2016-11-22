@@ -8,3 +8,10 @@ if(isset($_POST['changeNick'])) {
 	
 }
 
+if(isset($_POST['changePass'])) {
+	
+	$_SESSION['currpass'] = $_POST['pass'];
+	$_SESSION['pass2change'] = $_POST['newpass'];
+	header('Location: changepass.class.php');
+	
+}
