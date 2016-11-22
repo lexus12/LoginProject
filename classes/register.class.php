@@ -25,23 +25,27 @@ class Register
 	
 	public function checkData()
 	{
-		//check  password
+		//check  password and validate email
 		if($this->password == '' || strlen($this->password) < 6) {
+			
 			$_SESSION['pass_err'] = true;
 			header('Location: ../register.php');
+			
 		} elseif($this->password != $this->password2) {
 			
 			$_SESSION['pass_err2'] = true;
 			header('Location: ../register.php');
-		}
-				
-		//validate email
-		if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+			
+		}	elseif (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+			
 			$_SESSION['email_err'] = true;
 			header('Location: ../register.php');
-		}
-		
-		
+			
+		} else {
+			
+			return true;
+			
+		}	
 		
 	}//end of checkData function
 	
@@ -97,10 +101,12 @@ if(isset($_POST['zarejestruj'])) {
 
 	
 	$login = new Register($nick, $password, $password2, $email, $conn);
-	$login->checkData();
 	
-	$login->addUser();
+	if($login->checkData() == true) {
+		
+		$login->addUser();
+		
+	}
+	
 
 }
-
-?>
