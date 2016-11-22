@@ -38,7 +38,7 @@
 			}
 			
 			if(isset($_SESSION['userN_exists_err']) && $_SESSION['userN_exists_err'] == true) {
-				echo "User with that Nick allready exists";
+				echo "User with that Nick allready exists!";
 				$_SESSION['userN_exists_err'] = false;
 			}
 
@@ -50,4 +50,14 @@
 			if(isset($_SESSION['nickChange']) && $_SESSION['nickChange'] == true) {
 				echo "Your Nick was changed";
 				$_SESSION['nickChange'] = false;
+			}
+			
+			if(isset($_SESSION['passChange']) && $_SESSION['passChange'] == true) {
+				echo "Your Password was changed";
+				$_SESSION['passChange'] = false;
+			}
+			
+			if(isset($_SESSION['curr_pass_err']) && $_SESSION['curr_pass_err'] == true) {
+				echo "Write a valid current password!";
+				$_SESSION['curr_pass_err'] = false;
 			}
