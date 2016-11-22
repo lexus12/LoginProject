@@ -19,13 +19,7 @@ session_start();
 							<input type="text" name="nick" placeholder="NEW LOGIN" required="required" class="input-txt"/>
 							   <div class="login-footer">
 									<button type="submit" class="btn btn--right" name="changeNick">Change Your Nick</button>
-									<div class="comm">
-										<?php
-											//adds a comunicats when user need to know something
-											include_once('classes/communicats.class.php');
-										  ?>
-									</div>
-							  </div>
+								</div>
 						  </form>
 						 </div>
 					</div>
@@ -39,12 +33,6 @@ session_start();
 							<input type="text" name="newpass" placeholder="NEW PASSWORD" required="required" class="input-txt"/>
 							<div class="login-footer">
 								<button type="submit" class="btn btn--right" name="changePass">Change Your PASSWORD</button>
-								<div class="comm">
-									<?php
-										//adds a comunicats when user need to know something
-										include_once('classes/communicats.class.php');
-									  ?>
-								</div>
 							</div>
 						</form>
 					</div>
