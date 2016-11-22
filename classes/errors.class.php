@@ -18,7 +18,7 @@
 			}
 
 			if(isset($_SESSION['pass_err2']) && $_SESSION['pass_err2'] == true) {
-				echo "Passwords should be equals";
+				echo "Passwords should be equal";
 				$_SESSION['pass_err2'] = false;
 			}
 
