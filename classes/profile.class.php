@@ -18,7 +18,7 @@ if(isset($_POST['changePass'])) {
 
 if(isset($_POST['changeEmail'])) {
 	
-	$_SESSION['email2change'] = $_POST['email2change'];
+	$_SESSION['email2change'] = $_POST['email'];
 	header('Location: changeemail.class.php');
 	
 }
