@@ -22,9 +22,15 @@
 								</div>
 								<div class="comm">
 									<?php
-                  //adds a comunicats when user need to know something
-                  include_once('classes/communicats.class.php');
-                  ?>
+										//adds a comunicats when user need to know something
+										include_once('classes/communicats.class.php');
+									?>
+								</div>
+								<div class="err">
+									<?php
+										//adds a comunicats when user need to know something
+										include_once('classes/errors.class.php');
+									?>
 								</div>
 						  </div>
 					  </form>
