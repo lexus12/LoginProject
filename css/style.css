@@ -5,14 +5,14 @@ html {
 }
 
 .container {
-  width: 500px;
+  width: 600px;
   height: 400px;
   margin: 0 auto;
 }
 
 .login {
   margin-top: 50px;
-  width: 450px;
+  width: 550px;
 }
 
 .login-heading {
@@ -85,7 +85,7 @@ html {
 }
 
 .comm {
-  font-size: 1em;
+  font-size: 1.5em;
   line-height: 3em;
   color: #9eb218;
   text-decoration: none;
