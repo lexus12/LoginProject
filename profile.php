@@ -10,6 +10,7 @@ session_start();
 		<div id="header">
 			<ul>
 				<li><a href="userpage.php">Back to User Page</a></li>
+				<li><a href="accountdelete.php">Delete Your Account</a></li>
 				<li style="float:right"><a href="classes/logout.class.php">Logout</a>	</li>
 			</ul>
 		</div>
