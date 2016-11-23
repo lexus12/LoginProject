@@ -7,22 +7,19 @@ session_start();
 		<link rel="stylesheet" href="css/style.css">
 	</header>
 	<body>
-		<div class="header">
-		
-		<div>
-				<a href="userpage.php" class="lnk">Back to User Page</a>
-				---------------------
-				<a href="classes/logout.class.php" class="lnk">Logout</a>
-			</div>
-		
+		<div id="header">
+			<ul>
+				<li><a href="userpage.php">Back to User Page</a></li>
+				<li style="float:right"><a href="classes/logout.class.php">Logout</a>	</li>
+			</ul>
 		</div>
 		
 		<div>
 			<div class="container">
 				 <div>
 					<h1 class="info"><strong>Change your profile</strong></h1>
-						<div class="lnk">
-						<b>Change Your Nick - </b>( Current Nick is: <b><?php echo $_SESSION['nick']; ?></b> )<br/>
+						<div class="pageText">
+						<b class='pageTextH'>Change Your Nick - </b>( Current Nick is: <b  class='pageTextH'><?php echo $_SESSION['nick']; ?></b> )<br/>
 						 <form action="classes/profile.class.php" method="post">
 							<input type="text" name="nick" placeholder="NEW LOGIN" required="required" class="input-txt"/>
 							   <div class="login-footer">
@@ -32,9 +29,9 @@ session_start();
 						 </div>
 					</div>
 					
-					 <div  class="lnk">
+					 <div  class="pageText">
 						<form action="classes/profile.class.php" method="post">
-							<b>Change Your Password:</b><br/>
+							<b class='pageTextH'>Change Your Password:</b><br/>
 							Type Your current password: 
 							<input type="text" name="pass" placeholder="CURRENT PASSWORD" required="required" class="input-txt"/>
 							Type new password: 
@@ -46,8 +43,8 @@ session_start();
 					</div>
 					
 					<div>
-						<div class="lnk">
-							<b>Change Your Email - </b>( Current E-MAIL is: <b><?php echo $_SESSION['email']; ?></b> )<br/>
+						<div class="pageText">
+							<b class='pageTextH'>Change Your Email - </b>( Current E-MAIL is: <b  class='pageTextH'><?php echo $_SESSION['email']; ?></b> )<br/>
 							<form action="classes/profile.class.php" method="post">
 							
 							<input type="text" name="email" placeholder="NEW E-MAIL" required="required" class="input-txt"/>
