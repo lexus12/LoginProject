@@ -46,3 +46,8 @@
 				echo "Write a valid current password!";
 				$_SESSION['curr_pass_err'] = false;
 			}
+
+			if(isset($_SESSION['account_delete']) && $_SESSION['account_delete'] == true) {
+				echo "Your Account is no longer exists!";
+				$_SESSION['account_delete'] = false;
+			}
