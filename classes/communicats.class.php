@@ -19,3 +19,8 @@
 				echo "Register new account<br/> Login please!";
 				$_SESSION['user_registered'] = false;
 			}
+			
+			if(isset($_SESSION['user_logout']) && $_SESSION['user_logout'] == true) {
+				echo "Successfully logged out<br/> See You later!";
+				$_SESSION['user_logout'] = false;
+			}
