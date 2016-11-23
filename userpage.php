@@ -7,19 +7,20 @@ include_once('classes/userdata.class.php');
 		<link rel="stylesheet" href="css/style.css">
 	</header>
 	<body>
+		<div id="header">
+			<ul>
+				<li><a href="profile.php">Edit Your profile</a></li>
+				<li style="float:right"><a href="classes/logout.class.php">Logout</a>	</li>
+			</ul>
+		</div>
+
 		<div class="info">
-			<div class='lnk'>
-				<h2><?php $userData->showUser(); ?> You are logged in!<br/></h2>
-				<p>Your E-mail is: <b><?php echo $userEmail; ?></b> </p>
+			<div class='pageText'>
+				<h2><b class='pageTextH'><?php $userData->showUser(); ?></b> You are logged in!<br/></h2>
+				<p>Your E-mail is: <b class='pageTextH'><?php echo $userEmail; ?></b> </p>
 				<p>Your status is:
-					<b><?php	if($userPrivil == 1) {echo 'Administrator';}	else {echo "Użytkownik";}?></b>
+					<b class='pageTextH'><?php	if($userPrivil == 1) {echo 'Administrator';}	else {echo "Użytkownik";}?></b>
 				</p>
-				<div>
-					<a href="profile.php" class="lnk">Edit your profile</a>
-				</div>
-				<div>
-					<a href="classes/logout.class.php" class="lnk">Logout</a>
-				</div>
 			</div>
 		</div>
 	</body>
