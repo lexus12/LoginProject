@@ -10,6 +10,10 @@
 				$_SESSION['passChange'] = false;
 			}
 			
+			if(isset($_SESSION['emailChange']) && $_SESSION['emailChange'] == true) {
+				echo "Your Email was changed";
+				$_SESSION['emailChange'] = false;
+			}
 			//shows info about about successful registration
 			if(isset($_SESSION['user_registered']) && $_SESSION['user_registered'] == true) {
 				echo "Register new account<br/> Login please!";
