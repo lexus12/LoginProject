@@ -4,7 +4,7 @@
 		//check if user is logged and choose template
 		if(isset($_SESSION['is_logged']) && $_SESSION['is_logged'] == false) {
 						
-			include_once('templates/header.is.logged.php');
+			include_once('templates/header.isnt.logged.php');
 						
 		} else {
 					
