@@ -2,14 +2,14 @@
 		session_start();
 
 		//check if user is logged and choose template
-		if(isset($_SESSION['is_logged']) && $_SESSION['is_logged'] == false) {
+		if(isset($_SESSION['is_logged']) && $_SESSION['is_logged'] == true) {
 						
-			include_once('templates/header.isnt.logged.php');
+			header('Location: userpage.php');
 						
 		} else {
 					
-			header('Location: userpage.php');
-						
+			include_once('templates/header.isnt.logged.php');		
+			
 		}
 
 		?>
