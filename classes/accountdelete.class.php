@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 class AccDelete
 {
@@ -43,7 +42,7 @@ class AccDelete
 				$update->bindValue(':id' , $this->id, PDO::PARAM_INT);
 				$update->execute();
 				
-				$_SESSION['is_logged'] == false;
+				$_SESSION['is_logged'] = false;
 				$_SESSION['account_delete'] = true;
 				header('Location: ../index.php');
 					
@@ -72,29 +71,3 @@ class AccDelete
 
 	
 }//end of Change class
-
-if(!isset($_SESSION['is_logged']) || $_SESSION['is_logged'] == false) {
-		//no logged user - redirect
-			$_SESSION['data_err'] = true;
-			header('Location: index.php');
-}
-
-if(isset($_POST['accountDelete'])) {
-
-	$userName = $_SESSION['nick'];
-	$userPass = $_POST['pass'];
-	$checkUserPass = $_POST['pass2'];
-	
-	$deleteAccount = new AccDelete($userName, $userPass, $checkUserPass);
-	
-	if($deleteAccount->checkData() == true) {
-		
-		$deleteAccount->accDel();
-		
-	}
-	
-} else {
-	//no data sended to change then redirect
-	header('Location: ../accountdelete.php');
-	
-}
