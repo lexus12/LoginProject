@@ -1,5 +1,8 @@
 <?php
-session_start();
+	session_start();
+	if (!isset($_SESSION['nick'])&&!isset($_SESSION['password'])) {
+		header("location: index.php");
+	}
 ?>
 <html>
 	<header>
