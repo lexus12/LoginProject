@@ -21,7 +21,7 @@ session_start();
 					<h1 class="info"><strong>Change your profile</strong></h1>
 						<div class="pageText">
 						<b class='pageTextH'>Change Your Nick - </b>( Current Nick is: <b  class='pageTextH'><?php echo $_SESSION['nick']; ?></b> )<br/>
-						 <form action="classes/profile.class.php" method="post">
+						 <form action="routers/profile.router.php" method="post">
 							<input type="text" name="nick" placeholder="NEW LOGIN" required="required" class="input-txt"/>
 							   <div class="login-footer">
 									<button type="submit" class="btn btn--right" name="changeNick">Change Your Nick</button>
@@ -31,7 +31,7 @@ session_start();
 					</div>
 					
 					 <div  class="pageText">
-						<form action="classes/profile.class.php" method="post">
+						<form action="routers/profile.router.php" method="post">
 							<b class='pageTextH'>Change Your Password:</b><br/>
 							Type Your current password: 
 							<input type="text" name="pass" placeholder="CURRENT PASSWORD" required="required" class="input-txt"/>
@@ -46,7 +46,7 @@ session_start();
 					<div>
 						<div class="pageText">
 							<b class='pageTextH'>Change Your Email - </b>( Current E-MAIL is: <b  class='pageTextH'><?php echo $_SESSION['email']; ?></b> )<br/>
-							<form action="classes/profile.class.php" method="post">
+							<form action="routers/profile.router.php" method="post">
 							
 							<input type="text" name="email" placeholder="NEW E-MAIL" required="required" class="input-txt"/>
 							<div class="login-footer">
