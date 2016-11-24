@@ -23,7 +23,7 @@ session_start();
 				
 				<div  class="pageText">
 					<h1 class="info"><strong>Delete Your Account</strong></h1>
-					<form action="classes/accountdelete.class.php" method="post">
+					<form action="routers/delete.router.php" method="post">
 						Type Your current password: 
 						<input type="text" name="pass" placeholder="CURRENT PASSWORD" required="required" class="input-txt"/>
 						Retype Your password: 
